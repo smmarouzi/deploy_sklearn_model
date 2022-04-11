@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: sonova-test-service
+  namespace: default
+spec:
+  selector:
+    bb: sonova-test-app
+  ports:
+    - port: 3000
+      nodePort: 30001
+      targetPort: 3000
+  type: NodePort
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sonova-test-app
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      bb: sonova-test-app
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        bb: sonova-test-app
+    spec:
+      containers:
+        - name: mycontainer
+          image: myimage

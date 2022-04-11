@@ -1,0 +1,15 @@
+numpy
+fastapi
+pandas
+scikit-learn
+uvicorn
+requests
+pydantic
+starlette
+python-multipart
+joblib
+gunicorn
+pytest
+locust
+codecov
+pytest-cov
