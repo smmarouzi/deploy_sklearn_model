@@ -9,9 +9,9 @@
 
 * execute below  command lines to deploy image on GCP Container Registery
 
-<b>gcloud auth configure-docker  
-<b>gcloud config set project trading-320216  
-<b>gcloud builds submit --tag gcr.io/trading-320216/sonova-api  
+   <b>gcloud auth configure-docker  
+   <b>gcloud config set project trading-320216  
+   <b>gcloud builds submit --tag gcr.io/trading-320216/sonova-api  
 
 *  deploy it on Cloud Run  
 * Final URL is:  
